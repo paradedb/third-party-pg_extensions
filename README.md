@@ -18,6 +18,7 @@ To download and install an extension, you can simply do:
 
 ```bash
 PGVECTOR_VERSION=0.5.1
+PG_VERSION_MAJOR=15
 TARGETARCH=arm64
 
 curl -L "https://github.com/paradedb/third-party-pg_extensions/releases/download/pgvector-v${PGVECTOR_VERSION}-$TARGETARCH/pgvector-v${PGVECTOR_VERSION}-pg${PG_VERSION_MAJOR}-$TARGETARCH-linux-gnu.deb" -o /tmp/pgvector.deb && \
