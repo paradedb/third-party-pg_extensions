@@ -12,7 +12,7 @@ And needless to say, ParadeDB does not claim any ownership nor liability for the
 
 ## Usage
 
-Every extension pre-compiled and upload here is uploaded as its own GitHub Release with tag `<name>-v<semVer>-<arch>`, for instance `pgvector-v0.5.1-arm64`. Within each release, many possible versions of PostgreSQL might be supported. As of writing, we only support PostgreSQL 15. The extensions *might* work with different versions, but they were only compiled and tested against PostgreSQL 15. Every extension is built on Ubuntu 22.04 and packaged as a `.deb`.
+Every extension pre-compiled and upload here is uploaded as its own GitHub Release with tag `<name>-v<semVer>-pg<postgresMajorVersion>-<arch>-ubuntu<ubuntuVersion>`, for instance `pgvector-v0.5.1-pg15-arm64-ubuntu2204`. Within each release, many possible versions of PostgreSQL might be supported. As of writing, we only support PostgreSQL 15. The extensions *might* work with different versions, but they were only compiled and tested against PostgreSQL 15. Every extension is built on Ubuntu 22.04 and packaged as a `.deb`.
 
 To download and install an extension, you can simply do:
 
@@ -21,7 +21,7 @@ PGVECTOR_VERSION=0.5.1
 PG_VERSION_MAJOR=15
 TARGETARCH=arm64
 
-curl -L "https://github.com/paradedb/third-party-pg_extensions/releases/download/pgvector-v${PGVECTOR_VERSION}-$TARGETARCH/pgvector-v${PGVECTOR_VERSION}-pg${PG_VERSION_MAJOR}-$TARGETARCH-linux-gnu.deb" -o /tmp/pgvector.deb
+curl -L "https://github.com/paradedb/third-party-pg_extensions/releases/download/pgvector-v${PGVECTOR_VERSION}-pg${PG_VERSION_MAJOR}-$TARGETARCH-ubuntu2204/pgvector-v${PGVECTOR_VERSION}-pg${PG_VERSION_MAJOR}-$TARGETARCH-ubuntu2204.deb" -o /tmp/pgvector.deb
 
 sudo apt-get install -y /tmp/pgvector.deb
 ```
